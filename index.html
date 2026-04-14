@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Partner with Capstone</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300..600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans:  'Inter', 'Helvetica Neue', sans-serif;
+
+  --xs:   clamp(.75rem,  .7rem  + .25vw, .875rem);
+  --sm:   clamp(.875rem, .8rem  + .35vw, 1rem);
+  --base: clamp(1rem,    .95rem + .25vw, 1.125rem);
+  --lg:   clamp(1.125rem,1rem   + .75vw, 1.5rem);
+  --xl:   clamp(1.5rem,  1.2rem + 1.25vw,2.25rem);
+  --2xl:  clamp(2rem,    1.2rem + 2.5vw, 3.5rem);
+  --3xl:  clamp(2.5rem,  1rem   + 4vw,   5rem);
+
+  --s1:.25rem; --s2:.5rem; --s3:.75rem; --s4:1rem; --s5:1.25rem;
+  --s6:1.5rem; --s8:2rem;  --s10:2.5rem;--s12:3rem;--s16:4rem; --s20:5rem; --s24:6rem;
+
+  --bg:        #f1f2ee;
+  --surface:   #ffffff;
+  --surface2:  #e8ebe5;
+  --dark:      #131310;
+  --border:    rgba(28,28,22,.09);
+  --divider:   rgba(28,28,22,.07);
+  --ink:       #1c1c16;
+  --muted:     #5a5a4a;
+  --faint:     #9a9a88;
+  --white:     #ffffff;
+  --amber:     #bf8b28;
+  --amber-h:   #a37020;
+  --amber-bg:  rgba(191,139,40,.09);
+  --tag:       #eae9e2;
+
+  --w: 1160px;
+  --wn: 640px;
+  --ease: 160ms cubic-bezier(.16,1,.3,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:4.5rem}
+body{font-family:var(--sans);font-size:var(--base);color:var(--ink);background:var(--bg);line-height:1.65}
+img,svg{display:block;max-width:100%}
+h1,h2{font-family:var(--serif);line-height:1.07;text-wrap:balance}
+h3,h4{line-height:1.2;text-wrap:balance}
+p,li{text-wrap:pretty}
+a{color:inherit;text-decoration:none;transition:opacity var(--ease)}
+a:hover{opacity:.7}
+button{cursor:pointer;border:none;background:none;font:inherit}
+ul{list-style:none}
+
+.wrap{max-width:var(--w);margin-inline:auto;padding-inline:var(--s6)}
+.wrap-n{max-width:var(--wn);margin-inline:auto;padding-inline:var(--s6)}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(241,242,238,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--divider)}
+.nav-i{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);padding-block:var(--s4);max-width:var(--w);margin-inline:auto;padding-inline:var(--s6)}
+.wordmark{font-family:var(--serif);font-size:1.125rem;font-weight:500;letter-spacing:-.01em;color:var(--ink)}
+.wordmark span{color:var(--amber)}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s2);font-size:var(--sm);font-weight:500;letter-spacing:-.01em;padding:.6rem 1.25rem;border-radius:.5rem;cursor:pointer;border:1px solid transparent;transition:background var(--ease),color var(--ease),border-color var(--ease),transform var(--ease);white-space:nowrap}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--amber);color:#fff;border-color:var(--amber)}
+.btn-primary:hover{background:var(--amber-h);border-color:var(--amber-h);opacity:1}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--border)}
+.btn-ghost:hover{background:var(--surface2);opacity:1}
+.btn-lg{font-size:var(--base);padding:.8rem 1.75rem}
+.btn-sm{font-size:var(--xs);padding:.45rem .875rem}
+.btn-dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn-dark:hover{background:#333;border-color:#333;opacity:1}
+
+/* LABELS */
+.eyebrow{display:inline-block;font-size:var(--xs);font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin-bottom:var(--s4)}
+
+/* SECTIONS */
+section{padding-block:clamp(var(--s16),7vw,var(--s24))}
+hr.div{border:none;border-top:1px solid var(--divider)}
+
+/* HERO */
+.hero{background:var(--dark);color:var(--white);padding-block:clamp(var(--s20),12vw,10rem);position:relative;overflow:hidden;border-bottom:none}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 65% 50%,rgba(191,139,40,.08) 0%,transparent 65%),radial-gradient(ellipse 40% 50% at 5% 95%,rgba(255,255,255,.02) 0%,transparent 55%);pointer-events:none}
+/* Grid texture */
+.hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%)}
+.hero-inner{position:relative;max-width:800px}
+.hero-badge{display:inline-flex;align-items:center;gap:var(--s2);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.11);border-radius:9999px;padding:.3rem .875rem;font-size:var(--xs);font-weight:500;letter-spacing:.03em;color:rgba(255,255,255,.45);margin-bottom:var(--s8)}
+.hero-badge::before{content:'';width:5px;height:5px;background:var(--amber);border-radius:50%;display:inline-block}
+.hero h1{font-size:var(--3xl);font-weight:400;letter-spacing:-.025em;color:#fff;margin-bottom:var(--s6);max-width:18ch}
+.hero h1 em{font-style:italic;color:rgba(255,255,255,.65)}
+.hero p{font-size:var(--lg);color:rgba(255,255,255,.5);max-width:52ch;line-height:1.6;margin-bottom:var(--s10)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:var(--s3);align-items:center}
+.hero-ctas .btn-ghost{color:rgba(255,255,255,.6);border-color:rgba(255,255,255,.15)}
+.hero-ctas .btn-ghost:hover{background:rgba(255,255,255,.07);color:#fff;opacity:1}
+
+/* PROBLEM */
+.problem{background:var(--bg)}
+.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s5);margin-top:var(--s10)}
+.problem-card{background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--amber);border-radius:.75rem;padding:var(--s8)}
+.problem-card h3{font-size:var(--base);font-weight:600;letter-spacing:-.02em;margin-bottom:var(--s3)}
+.problem-card p{font-size:var(--sm);color:var(--muted);line-height:1.7}
+
+/* UNLOCKS */
+.unlocks{background:var(--surface);border-top:1px solid var(--divider);border-bottom:1px solid var(--divider)}
+.unlocks-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--divider);border:1px solid var(--border);border-radius:.75rem;overflow:hidden;margin-top:var(--s10)}
+.unlock-card{background:var(--surface);padding:var(--s8);transition:background var(--ease)}
+.unlock-card:hover{background:rgba(191,139,40,.03)}
+.unlock-num{font-size:var(--xs);font-weight:600;letter-spacing:.08em;color:var(--amber);text-transform:uppercase;margin-bottom:var(--s4)}
+.unlock-card h3{font-size:var(--base);font-weight:600;letter-spacing:-.02em;margin-bottom:var(--s3)}
+.unlock-card p{font-size:var(--sm);color:var(--muted);line-height:1.7}
+
+/* WHO */
+.who{background:var(--bg)}
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s16);align-items:start}
+.check-list{display:flex;flex-direction:column;gap:var(--s4);margin-top:var(--s8)}
+.check-list li{display:flex;gap:var(--s4);align-items:baseline;font-size:var(--sm);line-height:1.6;color:var(--ink)}
+.check-list li::before{content:'';display:inline-block;width:5px;height:5px;background:var(--amber);border-radius:1px;flex-shrink:0;margin-top:.45rem}
+.who-note{font-size:var(--sm);color:var(--muted);font-style:italic;margin-top:var(--s6);padding-top:var(--s6);border-top:1px solid var(--divider)}
+.who-callout{background:var(--dark);color:#fff;border-radius:.75rem;padding:var(--s10) var(--s8);position:relative;overflow:hidden}
+.who-callout::before{content:'"';position:absolute;top:-.1em;left:.05em;font-family:var(--serif);font-size:14rem;color:rgba(191,139,40,.06);line-height:1;pointer-events:none;user-select:none}
+.who-callout h3{font-family:var(--serif);font-size:var(--xl);font-weight:400;line-height:1.2;color:#fff;position:relative;margin-bottom:var(--s6)}
+.who-callout p{font-size:var(--sm);color:rgba(255,255,255,.4);line-height:1.7;position:relative}
+
+/* STEPS */
+.steps{background:var(--surface);border-top:1px solid var(--divider)}
+.steps-row{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s2);margin-top:var(--s10);position:relative}
+.steps-row::before{content:'';position:absolute;top:1.75rem;left:calc(16.66% + var(--s4));right:calc(16.66% + var(--s4));height:1px;background:var(--divider);z-index:0}
+.step{background:var(--bg);border:1px solid var(--border);border-radius:.75rem;padding:var(--s8);position:relative;z-index:1;transition:border-color var(--ease)}
+.step:hover{border-color:rgba(191,139,40,.3)}
+.step-num{width:36px;height:36px;background:var(--amber-bg);border:1px solid rgba(191,139,40,.22);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:var(--xs);font-weight:700;color:var(--amber);margin-bottom:var(--s6);letter-spacing:.04em}
+.step h3{font-size:var(--base);font-weight:600;letter-spacing:-.02em;margin-bottom:var(--s3)}
+.step p{font-size:var(--sm);color:var(--muted);line-height:1.7}
+.steps-cta{margin-top:var(--s10);text-align:center}
+
+/* MANIFESTO */
+.manifesto{background:var(--dark);color:#fff;padding-block:clamp(var(--s20),11vw,9rem);position:relative;overflow:hidden}
+.manifesto::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 65% 55% at 50% 100%,rgba(191,139,40,.09) 0%,transparent 65%);pointer-events:none}
+.manifesto-inner{max-width:820px;margin-inline:auto;padding-inline:var(--s6);text-align:center;position:relative}
+.manifesto-inner blockquote{font-family:var(--serif);font-size:clamp(1.5rem,1rem + 2.5vw,2.75rem);font-weight:400;line-height:1.2;letter-spacing:-.02em;color:#fff}
+.manifesto-inner blockquote em{font-style:italic;color:rgba(255,255,255,.55)}
+
+/* FORM */
+.form-section{background:var(--bg)}
+.form-wrap{display:grid;grid-template-columns:1fr 1fr;gap:var(--s16);align-items:start}
+.form-left h2{margin-bottom:var(--s5)}
+.form-left p{font-size:var(--base);color:var(--muted);line-height:1.75;margin-bottom:var(--s6)}
+.trust-row{display:flex;flex-direction:column;gap:var(--s3);margin-top:var(--s8)}
+.trust-item{display:flex;align-items:center;gap:var(--s3);font-size:var(--sm);color:var(--muted)}
+.trust-dot{width:5px;height:5px;background:var(--amber);border-radius:50%;flex-shrink:0}
+.form-box{background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--amber);border-radius:.75rem;padding:var(--s8)}
+.form-group{margin-bottom:var(--s5)}
+.form-group label{display:block;font-size:var(--xs);font-weight:500;letter-spacing:.03em;margin-bottom:var(--s2);color:var(--ink)}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:.65rem .875rem;border:1px solid var(--border);border-radius:.5rem;font-size:var(--sm);font-family:var(--sans);color:var(--ink);background:var(--bg);outline:none;transition:border-color var(--ease),box-shadow var(--ease)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--amber);box-shadow:0 0 0 3px rgba(191,139,40,.12)}
+.form-group textarea{resize:vertical;min-height:100px;line-height:1.6}
+.form-sub{margin-top:var(--s3);font-size:var(--xs);color:var(--faint);text-align:center}
+.form-sub a{color:var(--amber);text-decoration:underline;text-decoration-color:rgba(191,139,40,.3);text-underline-offset:3px}
+.success{display:none;text-align:center;padding:var(--s10) 0}
+.success.on{display:block}
+.success-ico{width:52px;height:52px;background:var(--amber-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto var(--s5);color:var(--amber)}
+.success h3{font-family:var(--serif);font-size:var(--xl);font-weight:400;margin-bottom:var(--s3)}
+.success p{font-size:var(--sm);color:var(--muted);line-height:1.7}
+
+/* FOOTER */
+footer{background:var(--dark);padding-block:var(--s10);border-top:1px solid rgba(255,255,255,.06)}
+.foot-i{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--s4)}
+.foot-i span,.foot-i a{font-size:var(--xs);color:rgba(255,255,255,.28);letter-spacing:.01em}
+.foot-i a:hover{opacity:.7;color:rgba(255,255,255,.5)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .problem-grid,.steps-row{grid-template-columns:1fr}
+  .steps-row::before{display:none}
+  .who-grid,.form-wrap,.unlocks-grid{grid-template-columns:1fr;gap:var(--s10)}
+}
+@media(max-width:600px){
+  .hero-ctas{flex-direction:column;align-items:flex-start}
+  .hero-ctas .btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-i">
+    <a href="#" class="wordmark">cap<span>stone</span></a>
+    <div style="display:flex;gap:var(--s3);align-items:center">
+      <a href="#program" style="font-size:var(--xs);color:var(--muted);font-weight:500">How it works</a>
+      <a href="#apply" class="btn btn-primary btn-sm">Apply to Partner</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ① HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-badge">Partnerships — 2026</div>
+      <h1>The next era of professional services belongs to firms willing to <em>move like a startup.</em></h1>
+      <p>Capstone partners with firms ready to unlock capacity, accelerate delivery, and build the infrastructure for what's next.</p>
+      <div class="hero-ctas">
+        <a href="#apply" class="btn btn-primary btn-lg">Apply to Partner</a>
+        <a href="#program" class="btn btn-ghost btn-lg">Explore the Partnership</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ② THE PROBLEM -->
+<section class="problem">
+  <div class="wrap">
+    <span class="eyebrow">Why it matters</span>
+    <h2 style="font-size:var(--2xl);max-width:16ch;margin-bottom:var(--s5)">You already know something has to change.</h2>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <h3>The Badlands</h3>
+        <p>At 50–100 people, your revenue doesn't match the infrastructure you need to reach the next level. You've outgrown your systems but can't afford to rebuild them — yet.</p>
+      </div>
+      <div class="problem-card">
+        <h3>The Resource Ceiling</h3>
+        <p>There's more work than people. Hiring isn't the answer. The firms winning right now are figuring out how to do more with the team they have.</p>
+      </div>
+      <div class="problem-card">
+        <h3>The Billing Trap</h3>
+        <p>AI is compressing delivery time. If you're still selling hours, you're working against yourself. The firms that figure out outcome billing first will take the market.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ③ WHAT A PARTNERSHIP UNLOCKS -->
+<section class="unlocks">
+  <div class="wrap">
+    <span class="eyebrow">The partnership</span>
+    <h2 style="font-size:var(--xl)">What changes when you partner with Capstone.</h2>
+    <div class="unlocks-grid">
+      <div class="unlock-card">
+        <div class="unlock-num">01</div>
+        <h3>Labs, faster</h3>
+        <p>Test AI-powered solutions directly with your client base — not in theory, not in isolation. Real problems, real results, faster learning.</p>
+      </div>
+      <div class="unlock-card">
+        <div class="unlock-num">02</div>
+        <h3>A durable competitive edge</h3>
+        <p>Build tools that could become the industry standard. The window is open now. The firms moving today are the ones who'll define what the industry looks like in five years.</p>
+      </div>
+      <div class="unlock-card">
+        <div class="unlock-num">03</div>
+        <h3>Capacity without headcount</h3>
+        <p>Free your best people from low-value work. Let them focus on the problems only they can solve.</p>
+      </div>
+      <div class="unlock-card">
+        <div class="unlock-num">04</div>
+        <h3>The margin shift</h3>
+        <p>Move from billing hours to billing outcomes. We'll help you get there — with your clients, on real work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ④ WHO THIS IS FOR -->
+<section class="who">
+  <div class="wrap">
+    <div class="who-grid">
+      <div>
+        <span class="eyebrow">Who this is for</span>
+        <h2 style="font-size:var(--xl)">This isn't for everyone. It's for the ones who want to win.</h2>
+        <p style="font-size:var(--base);color:var(--muted);line-height:1.75;margin-top:var(--s5)">The best Capstone partners share a few things in common.</p>
+        <ul class="check-list">
+          <li>A champion inside the firm — not someone told to explore this, someone who <em>wants</em> to</li>
+          <li>Entrepreneurial leadership — growth-minded, not waiting for regulators to set the rules</li>
+          <li>A client base with room to move — not locked entirely into rigid public-sector procurement</li>
+          <li>Willingness to build, not just buy — the best partners co-develop and co-own what we create together</li>
+        </ul>
+        <p class="who-note">If that sounds like you, we'd like to talk.</p>
+      </div>
+      <div class="who-callout">
+        <h3>Firms that move first don't just win — they set the standard everyone else has to catch up to.</h3>
+        <p>The professional services firms that define the next decade won't be the biggest ones. They'll be the ones that figured out how to compound their expertise with better infrastructure — earlier than everyone else.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑤ HOW IT WORKS -->
+<section class="steps" id="program">
+  <div class="wrap">
+    <span class="eyebrow">How it works</span>
+    <h2 style="font-size:var(--xl)">Three steps. Real work. Real results.</h2>
+    <div class="steps-row">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Diagnose</h3>
+        <p>We map your workflows, find the bottlenecks costing you capacity, and identify where AI can move the needle fast.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Build</h3>
+        <p>We co-develop solutions using your real client problems — not demos, not pilots that go nowhere.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Scale</h3>
+        <p>What works becomes repeatable. What's repeatable becomes a product. We help you own what you build.</p>
+      </div>
+    </div>
+    <div class="steps-cta">
+      <a href="#apply" class="btn btn-primary btn-lg" style="margin-top:var(--s10)">Start the Conversation</a>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥ MANIFESTO -->
+<section class="manifesto">
+  <div class="manifesto-inner">
+    <blockquote>A 15-person firm with the right AI stack can do the work of a 150-person firm. The question isn't whether this happens. It's whether you're building that firm — <em>or watching someone else do it.</em></blockquote>
+  </div>
+</section>
+
+<!-- ⑦ APPLICATION FORM -->
+<section class="form-section" id="apply">
+  <div class="wrap">
+    <div class="form-wrap">
+      <div class="form-left">
+        <span class="eyebrow">Apply</span>
+        <h2 style="font-size:var(--xl)">Apply to Partner with Capstone.</h2>
+        <p>We review every application and respond within 5 business days.</p>
+        <div class="trust-row">
+          <div class="trust-item"><span class="trust-dot"></span>No commitment required to apply</div>
+          <div class="trust-item"><span class="trust-dot"></span>Response within 5 business days</div>
+          <div class="trust-item"><span class="trust-dot"></span>We work with a small number of firms at a time</div>
+          <div class="trust-item"><span class="trust-dot"></span>Co-development means you retain what you build</div>
+        </div>
+      </div>
+      <div class="form-box">
+        <div id="form-state">
+          <form onsubmit="submit(event)">
+            <div class="form-group">
+              <label for="name">Your name</label>
+              <input type="text" id="name" placeholder="Jane Smith" required autocomplete="name"/>
+            </div>
+            <div class="form-group">
+              <label for="firm">Firm name</label>
+              <input type="text" id="firm" placeholder="Acme Engineering" required/>
+            </div>
+            <div class="form-group">
+              <label for="size">Firm size</label>
+              <select id="size" required>
+                <option value="" disabled selected>Select…</option>
+                <option>Under 25</option>
+                <option>25–50</option>
+                <option>50–100</option>
+                <option>100–200</option>
+                <option>200+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="bottleneck">What's the biggest bottleneck in your business right now?</label>
+              <textarea id="bottleneck" placeholder="Be direct — we read every response." required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="referral">How did you hear about Capstone? <span style="color:var(--faint);font-weight:400">(optional)</span></label>
+              <input type="text" id="referral" placeholder="Referral, LinkedIn, event…"/>
+            </div>
+            <div style="margin-top:var(--s6)">
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Submit Application</button>
+            </div>
+            <p class="form-sub" style="margin-top:var(--s4)">Not ready to apply yet? <a href="#">→ Join our next roundtable</a></p>
+          </form>
+        </div>
+        <div class="success" id="success">
+          <div class="success-ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3>Application received.</h3>
+          <p>We'll review it and get back to you within 5 business days. If it's a fit, we'll set up a short call to talk through where you are and what a partnership could look like.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-i">
+    <span>© 2026 Capstone. All rights reserved.</span>
+    <div style="display:flex;gap:var(--s6)">
+      <a href="#">How it works</a>
+      <a href="#">Apply</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function submit(e){
+  e.preventDefault();
+  document.getElementById('form-state').style.display='none';
+  document.getElementById('success').classList.add('on');
+}
+</script>
+</body>
+</html>
